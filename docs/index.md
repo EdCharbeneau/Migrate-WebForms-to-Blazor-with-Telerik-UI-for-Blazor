@@ -1,3 +1,8 @@
+---
+layout: post
+title: Migrate WebForms to Blazor with Telerik UI for Blazor
+path: index.md
+---
 ## Prerequisites 
 
 <!-- ??? 
