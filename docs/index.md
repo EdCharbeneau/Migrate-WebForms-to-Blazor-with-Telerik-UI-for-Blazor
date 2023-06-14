@@ -32,6 +32,7 @@ To complete the workshop be sure to install all of the following prerequisite it
 
 	![](img/1-installing-frameworks-vs.png) 
 	
+	{: .note-title }
 	After installing frameworks and workloads a reboot of Visual Studio may be necessary.
 
 3. Start the eShopLegacyWebForms application. From Visual Studio click **Start** or press **F5**. The sample application is a simple store management page with view, create, edit, and delete functions.

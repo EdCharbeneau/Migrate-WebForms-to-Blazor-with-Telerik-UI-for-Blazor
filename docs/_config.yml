@@ -3,3 +3,5 @@ plugins:
 - kramdown
 - jekyll-remote-theme
 title: Web Forms To Blazor
+# For copy button on code
+enable_copy_code_button: true
