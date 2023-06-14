@@ -1,6 +1,6 @@
 ---
-title: Telerik Views
-nav_order: 3
+title: 4. Telerik Views
+nav_order: 4
 ---
 
 ## Migrating views with Teleirk UI for Blazor
