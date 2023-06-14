@@ -60,3 +60,5 @@ To complete the workshop be sure to install all of the following prerequisite it
 5. Create a git branch named **migration**. This branch will contain the migrated application and track changes to the application.
 
 	![](img/create-branch.png)
+	
+## Conclusion
