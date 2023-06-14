@@ -1,7 +1,8 @@
 ---
-layout: post
 title: Introduction
-path: index.md
+date: 2024-06-14
+categories: prerequisite
+tags: intro
 ---
 ## Prerequisites 
 
