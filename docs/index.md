@@ -11,6 +11,7 @@ nav_order: 0
 		<Nullable>enable</Nullable>
 ```		
 -->
+
 To complete the workshop be sure to install all of the following prerequisite items. All of the items below have free, or free trial options. If you have existing paid licenses of the Visual Studio 2022 or Telerik UI for Blazor please use those and do not reinstall the free versions.
 
 * [Visual Studio 2022 [Any Edition]](https://visualstudio.microsoft.com/downloads/)
@@ -23,19 +24,19 @@ To complete the workshop be sure to install all of the following prerequisite it
 
 1. Clone the [eShop Repository](https://github.com/dotnet-architecture/eShopModernizing) which contains the sample Web Forms application. 
 
-Throughout this workshop we will be migrating the eShop sample application provided by Microsoft via GitHub. If you have not already created a clone of the repository, create one now. This repository contains multiple eShop solutions. For this workshop we will be using the **eShopLegacyWebForms** solution.
+	Throughout this workshop we will be migrating the eShop sample application provided by Microsoft via GitHub. If you have not already created a clone of the repository, create one now. This repository contains multiple eShop solutions. For this workshop we will be using the **eShopLegacyWebForms** solution.
 
 2. Open the eShopLegacyWebForms solution and install any missing frameworks. This step may vary from system to system.
 
-After cloning the application, navigate to the solution in Visual Studio. You will see multiple solution files in the repository, choose **eShopLegacyWebForms**. Be aware of any notifications from Visual Studio that might inform you of additional dependencies that will need to be installed. Look for a yellow banner with an **Install** link in the **Solution Explorer**. Click install, follow the prompts and complete the installation as needed.
+	After cloning the application, navigate to the solution in Visual Studio. You will see multiple solution files in the repository, choose **eShopLegacyWebForms**. Be aware of any notifications from Visual Studio that might inform you of additional dependencies that will need to be installed. Look for a yellow banner with an **Install** link in the **Solution Explorer**. Click install, follow the prompts and complete the installation as needed.
 
-![](_img/1-installing-frameworks-vs.png) Reboot may be necessary
+	![](_img/1-installing-frameworks-vs.png) Reboot may be necessary
 
 3. Start the eShopLegacyWebForms application. From Visual Studio click **Start** or press **F5**. The sample application is a simple store management page with view, create, edit, and delete functions.
 
-> Troubleshooting tip: If the application does not run on the first try, Start the application a second time. The first time building the project occasionally hits a race condition where resources are not yet ready for the application to run. Running the app a second time typically works.
+	> Troubleshooting tip: If the application does not run on the first try, Start the application a second time. The first time building the project occasionally hits a race condition where resources are not yet ready for the application to run. Running the app a second time typically works.
 
-![](2-eshop-start.png)
+	![](2-eshop-start.png)
 
 4. After verifying the application starts properly, close the browser or stop the application from Visual Studio.
 
