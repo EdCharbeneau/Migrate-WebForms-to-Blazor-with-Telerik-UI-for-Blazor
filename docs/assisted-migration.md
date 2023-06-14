@@ -3,27 +3,32 @@ title: 2. Assisted Migration
 nav_order: 2
 ---
 
-## Assisted Migration
+# Assisted Migration
+
+...
 
 1. Use the **.NET Upgrade Assistant** to **Upgrade** the **eShopLegacyWebForms** project. 
 
-    * Start the upgrade process by right clicking on the **eShopLegacyWebForms** project. Then, choose **Upgrade** from the context menu.
+    * Start the upgrade process by right clicking on the **eShopLegacyWebForms** project. Then, choose **Upgrade** from the context menu. Then, select **Side-by-side** from the wizard in the main window.
 
+    * For the **Upgrade Target** choose **Existing project**. Then select **eShopTelerikBlazorServer** from the Existing project drop down.
+    
     ![](img/3-upgrade.png)
-
-    * Select **Side-by-side** from the wizard in the main window.
-
+    
+    * Next select **.NET 7**. At the time of writing this is the current version.
+   
     ![](img/upgrade-2.png)
 
-    * Then choose, **Existing project**. Then select **eShopTelerikBlazorServer** from the Existing project drop down.
+    * The Summary of Changes page should now be displayed explaining the upgrade process and action items.
+    
+    {: .note-title }
+    The summary includes YARP proxies which are not used in this exercise. If this were a ASP.NET MVC or Web API application the YARP proxies would be important steps in the process. I this context, the YARP information can be ignored.
 
     ![](img/upgrade-4.png)
 
-    * Next select **.NET 7**. At the time of writing this is the current version.
+    * Finally, click **Finish** to begin the upgrade.
 
     ![](img/upgrade-6.png)
-
-    * Finally, click **Finish** to begin the upgrade.
 
     ![](img/upgrade-7.png)
 
