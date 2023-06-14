@@ -7,6 +7,12 @@ nav_order: 0
 
 ...
 
+{: .note-title }
+Note callouts contain contextual information for the current step. These notes are proved by the author to help communicate steps or concepts directly related to the workshop.
+
+{: .tip-title }
+Tip callouts contain related information that may be useful outside the workshop. 
+
 ## Prerequisites 
 
 <!-- ??? 

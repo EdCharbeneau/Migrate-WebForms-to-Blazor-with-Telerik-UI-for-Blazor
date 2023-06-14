@@ -26,7 +26,7 @@ Because of the number of differences between .NET Framework and ASP.NET Core, th
     * Select the **Default-Ocean-Blue-A11y** theme. The Default-Ocean-Blue-A11y theme is recommended because it has been tested color contrast ensuring for optimal accessibility.
     
     {: .tip-title }
-    > All Telerik themes are completely customizable through the [Progress Theme Builder](https://themebuilder.telerik.com/).
+    > All Telerik themes are completely customizable through the [Progress Theme Builder](https://themebuilder.telerik.com/). After completing the workshop, try customizing your theme.
     
     ![](img/add-telerik-project-3.png)
 
@@ -35,7 +35,7 @@ Because of the number of differences between .NET Framework and ASP.NET Core, th
       * [ ] **Use Localization** is disabled 
       
       {: .tip-title }
-      When using Telerik UI for Blazor on projects that require localization, the option can be enabled here and localization resources will be generated. Localization is not discussed in this workshop, so the option is left disabled.
+      When using Telerik UI for Blazor on projects that require localization, the option can be enabled here and localization resources will be generated. Localization is not discussed in this workshop, so the option is left disabled. Try enabling Localization in a sample application to see how it effects the template.
       
     * Click **finish** to generate the new project.
 

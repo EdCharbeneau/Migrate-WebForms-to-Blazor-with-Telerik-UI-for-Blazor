@@ -39,14 +39,15 @@ nav_order: 2
     {: .note-title }
     > The summary page will attempt to initialize a YARP proxy and Web Adapters. These are typically used in MVC/Web API applications and are not applicable to this scenario.
     
-    {: .tip-title }
+    {: .note-title }
     > The Upgrade Assistant can be opened to the Summary page at any time. To see the Summary page again, right click on the **eShopLegacyWebForms** project. Then, choose Upgrade from the context menu.
 
 2. Remove the unused proxy settings. In this instance, the .NET Upgrade Assistant added 3 unused settings in Program.cs. These settings are generally used when migrating Web API controllers which this project doesn't have. 
 
+    {: .note-title }
     > For some migration projects, starting both projects may be necessary. A side-by-side migration strategy will use both projects by forwarding web APIs from the source project to the target via proxy.  
 
-    * Find and remove the following lines from **Program.cs**
+    * **Find and remove** the following lines from **Program.cs**
 
     ```csharp
     // -approximate line numbers
@@ -59,7 +60,7 @@ nav_order: 2
 
     ```
 
-    * Remove the corresponding values in `appsettings.json`. The values will not cause any errors or warnings if they're not removed, but removing them will keep the file tidy.
+    * **Remove** the corresponding values in **appsettings.json**. The values will not cause any errors or warnings if they're not removed, but removing them will keep the file tidy.
 
     ```js
     // approxmiate line numbers 8-10
@@ -70,6 +71,7 @@ nav_order: 2
 
 3. Use the **.NET Upgrade Assistant** to migrate the models, classes, services from the **eShopLegacyWebForms** project. When using the Upgrade tool on a class, the target class will have its dependencies upgraded with it. For this example, the **Global.asax.cs** file will be used. Because it's the root class of the application, all of the app's dependencies will listed in the upgrade and chosen by default. 
 
+    {: .note-title }
     > Using the Global.asax.cs may be not be productive for all scenarios. For example, in larger applications individual files or features might be better to target for simplicity. 
 
     * Select the **Upgrade Class** link from the **Summary** screen, or the **Upgrade** menu.
