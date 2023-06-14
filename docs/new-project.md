@@ -3,20 +3,23 @@ title: 1. New Project
 nav_order: 1
 ---
 
-## Creating a new project
+# Creating a new project
 
-Because of the number of differences between .NET Framework and ASP.NET Core, the app will be migrated to a brand new solution. In addition, there is no direct migration path for Web Forms views in ASP.NET Core and the views will need to be completely rewritten. The Telerik UI for Blazor and its templates, scaffolding tools, and components will reduce the amount of coding needed to write new views.
+Because of the number of differences between .NET Framework and ASP.NET Core, the app will be migrated to a brand new project. In addition, there is no direct migration path for Web Forms views to ASP.NET Core and the views will need to be completely rewritten. The Telerik UI for Blazor templates, scaffolding tools, and components will reduce the amount of coding needed to write new views.
 
+{: .note-title }
 > The Telerik Extensions for Visual Studio are added to Visual Studio when installing Telerik UI for Blazor. If the extension isn't installed, it can be added from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=TelerikInc.ProgressTelerikBlazorVSExtensions), or the Telerik UI for Blazor installer. Important: Telerik UI for Blazor is required to make use of the extension.
 
 1. Create a new Telerik UI for Blazor Server application. This application will be the migration target. To create a Telerik UI for Blazor application in the solution:
 
     * Right click on the root item in the solution, **Solution, eShopLegacyWebForms**.
     * Select the **Telerik C# Blazor Application** template.
+    * Click Next
 
     ![](img/add-telerik-project.png)
 
     * Name the project **eShopTelerikBlazorServer**.
+    * Click Create
 
     ![](img/add-telerik-project-1.png)
 
@@ -24,7 +27,14 @@ Because of the number of differences between .NET Framework and ASP.NET Core, th
 
     ![](img/add-telerik-project-3.png)
 
-    * For the workshop the default project settings will be used. When using Telerik UI for Blazor on projects that require localization, the option can be enabled here and localization resources will be generated. Click finish to generate the new project.
+    * For the workshop the default project settings will be used. 
+      * [x] Use CDN Support is enabled.
+      * [ ] Use Localization is disabled 
+      
+      {: .tip-title }
+      When using Telerik UI for Blazor on projects that require localization, the option can be enabled here and localization resources will be generated. Localization is not discussed in this workshop, so the option is left disabled.
+      
+      * Click finish to generate the new project.
 
     ![](img/add-telerik-project-4.png)
 
