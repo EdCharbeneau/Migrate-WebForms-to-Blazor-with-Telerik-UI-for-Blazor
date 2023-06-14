@@ -9,25 +9,25 @@ nav_order: 1
 
 * Start the upgrade process by right clicking on the **eShopLegacyWebForms** project. Then, choose **Upgrade** from the context menu.
 
-![](3-upgrade.png)
+![](img/3-upgrade.png)
 
 * Select **Side-by-side** from the wizard in the main window.
 
-![](upgrade-2.png)
+![](img/upgrade-2.png)
 
 * Then choose, **Existing project**. Then select **eShopTelerikBlazorServer** from the Existing project drop down.
 
-![](upgrade-4.png)
+![](img/upgrade-4.png)
 
 * Next select **.NET 7**. At the time of writing this is the current version.
 
-![](upgrade-6.png)
+![](img/upgrade-6.png)
 
 * Finally, click **Finish** to begin the upgrade.
 
-![](upgrade-7.png)
+![](img/upgrade-7.png)
 
-![](upgrade-summary.png)
+![](img/upgrade-summary.png)
 
 > Note: The summary page will attempt to initialize a YARP proxy and Web Adapters. These are typically used in MVC/Web API applications and are not applicable to this scenario. 
 
@@ -63,23 +63,23 @@ app.MapForwarder("/{**catch-all}", app.Configuration["ProxyTo"]).Add(static buil
 
 * Select the **Upgrade Class** link from the **Summary** screen, or the **Upgrade** menu.
 
-![](upgrade-class.png)
+![](img/upgrade-class.png)
 
 * Choose the **Global** class from the **Classes** drop down and click **Upgrade**.
 
-![](upgrade-class-2.png)
+![](img/upgrade-class-2.png)
 
 * The tool will list all dependencies of the selected class. For this example scenario, it will be all the entire application's contents. Because there is no upgrade path for **System.Web**, deselect these items from the list. The classes may be easier organize in **Flat view**, which is enabled on the upper right corner of the interface.
 
-![](upgrade-class-3.png)
+![](img/upgrade-class-3.png)
 
 For simplicity this example will not include the migration steps for logging and **log4net**. Deselect the dependencies that use **log4net**. 
 
-![](upgrade-class-4.png)
+![](img/upgrade-class-4.png)
 
 * Once the items have been selected/deselected, click the **Upgrade selection** button to continue.
 
-![](upgrade-complete.png)
+![](img/upgrade-complete.png)
 
 ## Summary so far
 

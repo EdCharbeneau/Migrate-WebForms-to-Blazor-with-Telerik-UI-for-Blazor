@@ -36,7 +36,7 @@ To complete the workshop be sure to install all of the following prerequisite it
 
 	> Troubleshooting tip: If the application does not run on the first try, Start the application a second time. The first time building the project occasionally hits a race condition where resources are not yet ready for the application to run. Running the app a second time typically works.
 
-	![](2-eshop-start.png)
+	![](img/2-eshop-start.png)
 
 4. After verifying the application starts properly, close the browser or stop the application from Visual Studio.
 
@@ -51,7 +51,7 @@ To complete the workshop be sure to install all of the following prerequisite it
 
 5. Create a branch named `migration`. This branch will contain the migrated application and track changes to the application.
 
-	![](create-branch.png)
+	![](img/create-branch.png)
 
 ## Creating a new project
 
@@ -64,31 +64,31 @@ Because of the number of differences between .NET Framework and ASP.NET Core, th
 * Right click on the root item in the solution, **Solution, eShopLegacyWebForms**.
 * Select the **Telerik C# Blazor Application** template.
 
-![](add-telerik-project.png)
+![](img/add-telerik-project.png)
 
 * Name the project **eShopTelerikBlazorServer**.
 
-![](add-telerik-project-1.png)
+![](img/add-telerik-project-1.png)
 
 * Select a Telerik theme. The **Default-Ocean-Blue-A11y** is a recommended starting point because the colors have been tested for optimal accessibility. 
 
-![](add-telerik-project-3.png)
+![](img/add-telerik-project-3.png)
 
 * For the workshop the default project settings will be used. When using Telerik UI for Blazor on projects that require localization, the option can be enabled here and localization resources will be generated. Click finish to generate the new project.
 
-![](add-telerik-project-4.png)
+![](img/add-telerik-project-4.png)
 
 2. Set the startup project to the Blazor Server project,  **eShopTelerikBlazorServer**. Choose **Configure Startup Projects** from the **Project** menu.
 
-![](startup-project-1.png)
+![](img/startup-project-1.png)
 
-![](startup-project-2.png)
+![](img/startup-project-2.png)
 
 * Select the **eShopTelerikBlazorServer** project from the **Single startup project** option. This menu can be revisited at any time to switch startup projects, or enable multiple startup projects.
 
 3. Start the **eShopTelerikBlazorServer** project by clicking **Start** or pressing **F5**.
 
-![](telerik-project.png)
+![](img/telerik-project.png)
 
 4. Explore the new application to see an example of Telerik UI for Blazor's components and capabilities.
 
