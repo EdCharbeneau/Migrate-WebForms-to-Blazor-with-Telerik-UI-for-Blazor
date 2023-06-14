@@ -8,4 +8,4 @@ enable_copy_code_button: true
 callouts:
   note-title:
     title: Note
-    color: red
+    color: blue
