@@ -24,7 +24,7 @@ ASP.NET Core applications are standardized to follow the same conventions as the
 
     Last is **ConfigDataBase**. In Web Forms this method setup the EntityFramework configuration and database initialization methods. Included is a mock data setting used to run the application with an in memory database instead of SQL server.
 
-    ```cs 
+    ```csharp
     protected void Application_Start(object sender, EventArgs e)
     {
         // Code that runs on application startup
@@ -37,7 +37,7 @@ ASP.NET Core applications are standardized to follow the same conventions as the
 
 2. Migrate **ConfigureContainer** to ASP.NET Core. The method will need to be rewritten inside of **Program.cs**.
 
-    ```cs
+    ```csharp
     // Original Method
     private void ConfigureContainer()
     {
@@ -54,7 +54,7 @@ ASP.NET Core applications are standardized to follow the same conventions as the
 
     * ASP.NET Framework's **System.Configuration.ConfigurationManager** is not compatible with ASP.NET Core's **Microsoft.Extensions.Configuration.ConfigurationManager** and will need to be updated. In **Program.cs** under `CreateBuilder`, write a statement that fetches the value of `UseMockData` from configuration.
 
-    ```
+    ```csharp
     var builder = WebApplication.CreateBuilder(args);
     // App Settings
     bool useMockData = bool.Parse(builder.Configuration["UseMockData"]!);
@@ -64,7 +64,7 @@ ASP.NET Core applications are standardized to follow the same conventions as the
 
     * Autofac will need to be updated to the latest version that supports .NET Core. Open the NuGet package manager, then browse for **Autofac**, and **Autofac.Extensions.DependencyInjection** and install both packages. After the pacakges are installed, add the following using statements to `Program.cs`.
 
-    ```
+    ```csharp
     using Autofac;
     using Autofac.Extensions.DependencyInjection;
     using eShopLegacyWebForms.Modules;
@@ -73,7 +73,7 @@ ASP.NET Core applications are standardized to follow the same conventions as the
 
     * Use Autofac to re-implement **ConfigureContainer** in **Program.cs**. The new implementation will reuse the existing **ApplicationModule** code that was auto-migrated during the upgrade process. To implement Autofac, write a statement that uses **builder.Host.UseServiceProviderFactory**.
 
-    ```
+    ```csharp
     // Add services to the container.
     builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory())
             .ConfigureContainer<ContainerBuilder>(container =>
@@ -84,7 +84,7 @@ ASP.NET Core applications are standardized to follow the same conventions as the
 
 3. Migrate **ConfigDataBase** to ASP.NET Core. The method will need to be rewritten inside of **Program.cs**.
 
-    ```
+    ```csharp
     private void ConfigDataBase()
     {
         // ConfigurationManager Not compatible with ASP.NET Core
@@ -107,7 +107,7 @@ ASP.NET Core applications are standardized to follow the same conventions as the
 
     * Set the database initializer by adding a using statement for **System.Data.Entity**. Then update the statement `container.Resolve` to use the newer `GetRequiredService` method from the app's services container.
 
-    ```
+    ```csharp
     var app = builder.Build();
 
     if (!useMockData)
@@ -118,7 +118,7 @@ ASP.NET Core applications are standardized to follow the same conventions as the
 
 4. The database initializer is now set **CatalogDBInitializer**, however the CatalogDBInitializer class has errors due to breaking changes from ASP.NET Framework to ASP.NET Core. Migrate **CatalogDBInitializer** by updating the code identified by the compiler.
 
-    ```
+    ```csharp
     // Make sure to copy the files below from the old project
     private const string CatalogItemHiLoSequenceScript = @"Models\Infrastructure\dbo.catalog_hilo.Sequence.sql"; // 17
     private const string CatalogBrandHiLoSequenceScript = @"Models\Infrastructure\dbo.catalog_brand_hilo.Sequence.sql"; // 18
@@ -153,7 +153,7 @@ ASP.NET Core applications are standardized to follow the same conventions as the
 
     * The API **HostingEnvironment.ApplicationPhysicalPath** is used to get the physical path of the running application. This method is not part of **IWebHostEnvironment**. Replace instances of **HostingEnvironment.ApplicationPhysicalPath** with **IWebHostEnvironment**. Update all instances of contentRootPath.
 
-    ```
+    ```csharp
     private readonly bool useCustomizationData;
     private readonly string contentRootPath;
 
