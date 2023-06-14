@@ -1,8 +1,6 @@
 ---
 title: Introduction
 date: 2024-06-14
-categories: prerequisite
-tags: intro
 ---
 ## Prerequisites 
 
