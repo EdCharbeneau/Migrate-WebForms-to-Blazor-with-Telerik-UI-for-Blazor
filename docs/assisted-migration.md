@@ -32,12 +32,15 @@ nav_order: 2
 
     ![](img/upgrade-7.png)
     
-    * Once the upgrade process is complete as finally Summary page will be displayed. On this page there are additional actions that will help migrate code that was not included in the initial migration process. These actions will be used later in the workshop.
+    * Once the upgrade process is complete as finally Summary page will be displayed. On this page there are additional actions that will help migrate code that was not included in the initial migration process. These actions will be used later in the workshop, this page can be revisited by opening the Upgrade Assistant via the context menu, for now click Done to continue.
 
     ![](img/upgrade-summary.png)
 
     {: .note-title }
-    > The summary page will attempt to initialize a YARP proxy and Web Adapters. These are typically used in MVC/Web API applications and are not applicable to this scenario. 
+    > The summary page will attempt to initialize a YARP proxy and Web Adapters. These are typically used in MVC/Web API applications and are not applicable to this scenario.
+    
+    {: .tip-title }
+    > The Upgrade Assistant can be opened to the Summary page at any time. To see the Summary page again, right click on the **eShopLegacyWebForms** project. Then, choose Upgrade from the context menu.
 
 2. Remove the unused proxy settings. In this instance, the .NET Upgrade Assistant added 3 unused settings in Program.cs. These settings are generally used when migrating Web API controllers which this project doesn't have. 
 
