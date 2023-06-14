@@ -35,9 +35,10 @@ To complete the workshop be sure to install all of the following prerequisite it
 	{: .note-title }
 	After installing frameworks and workloads a reboot of Visual Studio may be necessary.
 
-3. Start the eShopLegacyWebForms application. From Visual Studio click **Start** or press **F5**. The sample application is a simple store management page with view, create, edit, and delete functions.
+3. Start the eShopLegacyWebForms application. From Visual Studio, click **Start** or press **F5**. The sample application is a simple store management page with view, create, edit, and delete functions. Explore the application, make reference of the different actions and page views.
 
-	> Troubleshooting tip: If the application does not run on the first try, Start the application a second time. The first time building the project occasionally hits a race condition where resources are not yet ready for the application to run. Running the app a second time typically works.
+    {: .note-title }
+	> If the application does not run on the first try, Start the application a second time. The first time building the project occasionally hits a race condition where resources are not yet ready for the application to run. Running the app a second time typically works.
 
 	![](img/2-eshop-start.png)
 
@@ -52,6 +53,6 @@ To complete the workshop be sure to install all of the following prerequisite it
 	* **Services**, this folder contains data services used in the application.
 	* **ViewModel**, this folder contains a class used as a data projection for the application's main view.
 
-5. Create a branch named `migration`. This branch will contain the migrated application and track changes to the application.
+5. Create a git branch named **migration**. This branch will contain the migrated application and track changes to the application.
 
 	![](img/create-branch.png)

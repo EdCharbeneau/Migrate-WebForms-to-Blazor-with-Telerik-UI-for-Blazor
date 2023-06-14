@@ -9,3 +9,6 @@ callouts:
   note-title:
     title: Note
     color: blue
+  tip-title:
+    title: Tip
+    color: green
