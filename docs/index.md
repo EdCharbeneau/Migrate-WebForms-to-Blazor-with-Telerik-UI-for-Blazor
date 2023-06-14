@@ -16,7 +16,7 @@ To complete the workshop be sure to install all of the following prerequisite it
 
 * [Visual Studio 2022 [Any Edition]](https://visualstudio.microsoft.com/downloads/)
 * [.NET 7.0.5 or later](https://dotnet.microsoft.com/en-us/download/dotnet/7.0)
-* Telerik UI for Blazor [Free Trial or Licensed](https://www.telerik.com/try/ui-for-blazor)
+* [Telerik UI for Blazor Free Trial or Licensed](https://www.telerik.com/try/ui-for-blazor)
 * [.NET Upgrade Assistant for VS 2022 (Preview)](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.upgradeassistant)
 * [eShopModernizing GitHub Repository](https://github.com/dotnet-architecture/eShopModernizing)
 
