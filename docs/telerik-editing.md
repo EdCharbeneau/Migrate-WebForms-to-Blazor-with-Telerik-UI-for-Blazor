@@ -1,7 +1,6 @@
 ---
-layout: post
-title: Telerik Views
-path: telerik-editing.md
+title: Telerik Editing
+nav_order: 4
 ---
 
 ## Telerik Grid editing operations

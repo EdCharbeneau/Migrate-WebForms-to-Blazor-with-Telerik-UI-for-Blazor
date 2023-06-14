@@ -1,7 +1,6 @@
 ---
-layout: post
 title: Assisted Migration
-path: assisted-migration.md
+nav_order: 1
 ---
 
 ## Assisted Migration

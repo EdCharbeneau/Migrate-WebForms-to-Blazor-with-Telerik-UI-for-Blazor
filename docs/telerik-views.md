@@ -1,7 +1,6 @@
 ---
-layout: post
 title: Telerik Views
-path: telerik-views.md
+nav_order: 3
 ---
 
 ## Migrating views with Teleirk UI for Blazor

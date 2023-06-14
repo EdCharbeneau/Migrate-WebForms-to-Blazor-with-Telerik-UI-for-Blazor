@@ -1,7 +1,6 @@
 ---
-layout: post
 title: Manual Migration
-path: manual-migration.md
+nav_order: 2
 ---
 
 # Manual migration
