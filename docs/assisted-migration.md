@@ -11,30 +11,33 @@ nav_order: 2
 
     * Start the upgrade process by right clicking on the **eShopLegacyWebForms** project. Then, choose **Upgrade** from the context menu. Then, select **Side-by-side** from the wizard in the main window.
 
-    * For the **Upgrade Target** choose **Existing project**. Then select **eShopTelerikBlazorServer** from the Existing project drop down.
-    
     ![](img/3-upgrade.png)
     
-    * Next select **.NET 7**. At the time of writing this is the current version.
-   
+    * For the **Upgrade Target** choose **Existing project**. Then select **eShopTelerikBlazorServer** from the Existing project drop down.
+    
     ![](img/upgrade-2.png)
+   
+    * Next select **.NET 7**. At the time of writing this is the current version.
+
+    ![](img/upgrade-4.png)
 
     * The Summary of Changes page should now be displayed explaining the upgrade process and action items.
     
     {: .note-title }
     The summary includes YARP proxies which are not used in this exercise. If this were a ASP.NET MVC or Web API application the YARP proxies would be important steps in the process. I this context, the YARP information can be ignored.
 
-    ![](img/upgrade-4.png)
+    ![](img/upgrade-6.png)
 
     * Finally, click **Finish** to begin the upgrade.
 
-    ![](img/upgrade-6.png)
-
     ![](img/upgrade-7.png)
+    
+    * Once the upgrade process is complete as finally Summary page will be displayed. On this page there are additional actions that will help migrate code that was not included in the initial migration process. These actions will be used later in the workshop.
 
     ![](img/upgrade-summary.png)
 
-    > Note: The summary page will attempt to initialize a YARP proxy and Web Adapters. These are typically used in MVC/Web API applications and are not applicable to this scenario. 
+    {: .note-title }
+    > The summary page will attempt to initialize a YARP proxy and Web Adapters. These are typically used in MVC/Web API applications and are not applicable to this scenario. 
 
 2. Remove the unused proxy settings. In this instance, the .NET Upgrade Assistant added 3 unused settings in Program.cs. These settings are generally used when migrating Web API controllers which this project doesn't have. 
 
