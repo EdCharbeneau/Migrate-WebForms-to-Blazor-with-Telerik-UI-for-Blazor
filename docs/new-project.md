@@ -40,7 +40,7 @@ Because of the number of differences between .NET Framework and ASP.NET Core, th
 
     ![](img/telerik-project.png)
 
-    4. Explore the new application to see an example of Telerik UI for Blazor's components and capabilities.
+4. Explore the new application to see an example of Telerik UI for Blazor's components and capabilities.
 
     * `/` the root page demonstrates the window component and notification components. The code for this view is located in `Index.razor`.
     * `/grid` the grid page displays a sample Telerik Grid component with Create, Read, Update and Delete operations.
