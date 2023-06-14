@@ -40,18 +40,18 @@ To complete the workshop be sure to install all of the following prerequisite it
 
 4. After verifying the application starts properly, close the browser or stop the application from Visual Studio.
 
-Take a moment to review the structure of the application and become familiar with its parts.
+	Take a moment to review the structure of the application and become familiar with its parts.
 
-* **App_Start**, this folder contains the startup routines for the application.
-* **Catalog**, this folder contains the Create, Delete, Details, and Edit features for the application.
-* **Models**, this folder contains various data models for the application and its database. 
-* **Modules**, this folder contains dependency injection (DI) configurations for AutoFac.
-* **Services**, this folder contains data services used in the application.
-* **ViewModel**, this folder contains a class used as a data projection for the application's main view.
+	* **App_Start**, this folder contains the startup routines for the application.
+	* **Catalog**, this folder contains the Create, Delete, Details, and Edit features for the application.
+	* **Models**, this folder contains various data models for the application and its database. 
+	* **Modules**, this folder contains dependency injection (DI) configurations for AutoFac.
+	* **Services**, this folder contains data services used in the application.
+	* **ViewModel**, this folder contains a class used as a data projection for the application's main view.
 
 5. Create a branch named `migration`. This branch will contain the migrated application and track changes to the application.
 
-![](create-branch.png)
+	![](create-branch.png)
 
 ## Creating a new project
 
