@@ -3,7 +3,7 @@ title: 4. Telerik Views
 nav_order: 4
 ---
 
-## Migrating views with Teleirk UI for Blazor
+# Migrating views with Teleirk UI for Blazor
 
 With the application's core logic migrated, the views for the application will need to be rewritten for Blazor. To shorten development time Telerik UI for Blazor is used. Telerik UI for Blazor includes 100+ UI components, productivity tools, and customization features that shorten development cycles.
 

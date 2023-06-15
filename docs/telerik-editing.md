@@ -3,7 +3,7 @@ title: 5. Telerik Editing
 nav_order: 5
 ---
 
-## Telerik Grid editing operations
+# Telerik Grid editing operations
 
 In the original application individual views were used for creating, editing, and deleting data. The Telerik Grid can perform these tasks using one of several built-in editor. Depending on the data model, editing operations may be completely automated by the Telerik Grid. In this scenario, some additional steps are required to customize the experience using templates. 
 
