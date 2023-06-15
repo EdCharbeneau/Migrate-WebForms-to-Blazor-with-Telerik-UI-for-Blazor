@@ -28,7 +28,7 @@ In the original application individual views were used for creating, editing, an
 
     * In the code section add a private field to hold the collection of CatalogType and CatalogBrand. Set the fields to an empty collection. Next, use the OnInitializedAsync method to fetch to populate the fields using the DataService's GetCatalogTypes and GetCatalogBrands methods.
 
-    ```razor
+    ```html
     private IEnumerable<CatalogType> types = Array.Empty<CatalogType>();
     private IEnumerable<CatalogBrand> brands = Array.Empty<CatalogBrand>();
 
@@ -48,7 +48,7 @@ In the original application individual views were used for creating, editing, an
     
     * Repeat the process for the CatalogType column.
 
-    ```razor
+    ```html
     <GridColumn Field="CatalogBrand.Brand" Title="Brand" FilterMenuType="@FilterMenuType.CheckBoxList">
         <EditorTemplate>
             @{
@@ -73,7 +73,7 @@ In the original application individual views were used for creating, editing, an
 
     * Use the "OnAdd" event to initialize a new CatalogItem when the Add button is clicked.
 
-    ```razor
+    ```html
     async Task OnAdd(GridCommandEventArgs args)
     {
         var newItem = (CatalogItem)args.Item;
@@ -92,7 +92,7 @@ In the original application individual views were used for creating, editing, an
 
     * Delegate the new method to the OnAdd event on the TelerikGrid.
 
-    ```razor
+    ```html
     <TelerikGrid ... OnAdd="@OnAdd">
     ```
 
@@ -102,6 +102,6 @@ In the original application individual views were used for creating, editing, an
 
     * Start the application and try to **delete a record**. The action should cause a prompt confirming the action.
 
-    ```razor
+    ```html
     <TelerikGrid ... ConfirmDelete="true">
     ```
