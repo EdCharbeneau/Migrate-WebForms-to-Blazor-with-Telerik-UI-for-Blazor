@@ -5,14 +5,12 @@ nav_order: 3
 
 # Manual migration
 
-The **.NET Upgrade Assistant** has upgraded the project as much has possible using automation and it is now time to manually work on the project. In its current state, the project is not able to run as much of the code needs to be manually rewritten. The following are highlights of what needs to be completed before the migration is complete.
+The **.NET Upgrade Assistant** has upgraded the project as much has possible using automation and it is now time to manually work on the project. In its current state, the project is not able to run. Before the application will start, some of the code needs to be manually rewritten. The following are highlights of what needs to be completed before the migration is complete.
 
 * There is no **Global.asax.cs** in ASP.NET Core. This file must be manually migrated to **Program.cs**
 * Configuration has breaking changes between ASP.NET Framework and ASP.NET Core.
 * Dependency injection (DI) is included in ASP.NET Core. 3rd party DI can be used, however manual changes are required to do so.
 * Web Forms views **.aspx** must be completely reconstructed as Razor Components **.razor**.
-
-<!-- continue list here -->
 
 ## Migrating Global.asax.cs
 
@@ -219,3 +217,9 @@ ASP.NET Core applications are standardized to follow the same conventions as the
         }
     }
     ```
+    
+## Conclusion
+
+In this section we continued where the .NET Upgrade Assistant left off. The Global.asax.cs was migrated to Program.cs. Configuration related code was updated to use the new methods of storing and retrieving configuration information. The DI code base was migrated to a new version of Autofac and configured for ASP.NET Core. In addition, some database initialization code was rewritten.
+
+Overall, the "back end" of the application has been migrated successfully. In the next section we'll focus on the "front end" of the application by generating a new view using the Telerik UI for Blazor scaffolding tool.
