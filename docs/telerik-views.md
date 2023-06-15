@@ -5,7 +5,7 @@ nav_order: 4
 
 # Migrating views with Teleirk UI for Blazor
 
-With the application's core logic migrated, the views for the application will need to be rewritten for Blazor. To shorten development time Telerik UI for Blazor is used. Telerik UI for Blazor includes 100+ UI components, productivity tools, and customization features that shorten development cycles.
+With the application's core logic migrated, the views for the application will need to be rewritten for Blazor. In this section we'll use Telerik UI for Blazor to complete the application's views. Telerik UI for Blazor includes 100+ UI components, productivity tools, and customization features that shorten development cycles.
 
 There are four main views in the **eShopLegacyWebForms** application. The **Default** grid view and **Create**, **Edit** and **Delete** views. The views are responsible for managing the **Catalog Items** in a database. Using the Telerik Grid, all four views can be consolidated and managed using just one component. In addition, scaffolding can be used to assist in the view's creation.
 
@@ -209,3 +209,9 @@ There are four main views in the **eShopLegacyWebForms** application. The **Defa
     * Run the application and view the customized grid, try filtering different columns.
 
     ![](img/grid-second-run.png)
+    
+## Conclusion
+
+In this section we used Telerik UI for Blazor to generate a grid view. In addition, we learned how to leverage the grid's meta data to enhance application performance using the DatasourceRequest API. We used the grid's formatting and template features, and enhanced the filtering capabilities. The Telerik Grid offered a complete replacement for the legacy view while adding features and improving performance.
+
+In the next section we will complete the migration by replacing the remaining legacy views.

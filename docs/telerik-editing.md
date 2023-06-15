@@ -5,7 +5,9 @@ nav_order: 5
 
 # Telerik Grid editing operations
 
-In the original application individual views were used for creating, editing, and deleting data. The Telerik Grid can perform these tasks using one of several built-in editor. Depending on the data model, editing operations may be completely automated by the Telerik Grid. In this scenario, some additional steps are required to customize the experience using templates. 
+In the original application individual views were used for creating, editing, and deleting data. The Telerik Grid can perform these tasks using one of several built-in editor. Depending on the data model, editing operations may be completely automated by the Telerik Grid. In this scenario, some additional steps are required to customize the experience using templates.
+
+In this section we'll make full use of the Telerik Grid's editing capabilities and editor templates, and events. 
 
 1. Run the application, click the edit button for an item and examine the generated popup editor. Note the **Brand** and **Type** editors are text boxes, however in the model these fields are backed by an Id number.
 
@@ -105,3 +107,7 @@ In the original application individual views were used for creating, editing, an
     ```html
     <TelerikGrid ... ConfirmDelete="true">
     ```
+
+## Conclusion
+
+In this section we replaced the create, edit and delete views in the application by leveraging the existing Telerik Grid view. With all of the views for the application migrated, the new application is ready for production.
