@@ -42,7 +42,7 @@ There are four main views in the **eShopLegacyWebForms** application. The **Defa
 
     * Update the page route directive from "/NewIndex" to "/".
 
-    ```razor
+    ```html
     @page "/"
     ```
 
@@ -138,7 +138,7 @@ There are four main views in the **eShopLegacyWebForms** application. The **Defa
     * Filterable="false"
     * Editable="false"
 
-    ```razor
+    ```html
     <GridColumns>
         <GridColumn Field="@nameof(CatalogItem.PictureFileName)" Title="Picture" Width="130px" Filterable="false" Editable="false">
         </GridColumn>
@@ -148,7 +148,7 @@ There are four main views in the **eShopLegacyWebForms** application. The **Defa
 
     * Inside the GridColumn, add a Template with a razor code block `@{}` inside. Within the code block write a razor snippet that displays the PictureFileName in an HTML **img** element.
 
-    ```razor
+    ```html
     <GridColumn Field="@nameof(CatalogItem.PictureFileName)" Title="Picture" Width="130px" Filterable="false" Editable="false">
         <Template>
             @{
@@ -167,13 +167,13 @@ There are four main views in the **eShopLegacyWebForms** application. The **Defa
 
 4. Disable the AutoGenerateColumns columns feature. Then add columns for the remianing properties of the CatalogItem class.
 
-    ```razor
+    ```html
     <TelerikGrid ... AutoGenerateColumns="false" .../>
     ```
 
     > Note: Field names are easily set and maintained using the `nameof` operator. However, some values require a string literal to produce the proper navigation to deeply nested property names. Example: The field CatalogItem.CatalogBrand.Brand, can't be expressed with `nameof`, and must be represented as the string `CatalogBrand.Brand`.
 
-    ```razor
+    ```html
     <GridColumns>
             ...
             <GridColumn Field="@nameof(CatalogItem.Name)" />
@@ -190,7 +190,7 @@ There are four main views in the **eShopLegacyWebForms** application. The **Defa
 
 5. Use the GridColumn's **DisplayFormat** property to display the column's values in a currency format.
 
-    ```razor
+    ```html
     <GridColumn Field="@nameof(CatalogItem.Price)" DisplayFormat="{0:C}" />
     ```
 
@@ -198,11 +198,11 @@ There are four main views in the **eShopLegacyWebForms** application. The **Defa
 
     > The Telerik Grid has menu options that offer a better UX for certain data sets. The CheckBoxList menu aggregates data inside a simple checkbox list menu. Try toggling the menu types to see the difference.
 
-    ```razor
+    ```html
     <GridColumn Field="CatalogBrand.Brand" Title="Brand" FilterMenuType="@FilterMenuType.CheckBoxList"/>
     ```
 
-    ```razor
+    ```html
     <GridColumn Field="CatalogType.Type" Title="Type" FilterMenuType="@FilterMenuType.CheckBoxList"/>
     ```
 
