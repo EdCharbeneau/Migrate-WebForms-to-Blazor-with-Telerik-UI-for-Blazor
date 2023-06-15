@@ -32,7 +32,7 @@ nav_order: 2
 
     ![](img/upgrade-7.png)
     
-    * Once the upgrade process is complete as finally Summary page will be displayed. On this page there are additional actions that will help migrate code that was not included in the initial migration process. These actions will be used later in the workshop, this page can be revisited by opening the Upgrade Assistant via the context menu, for now click Done to continue.
+    * Once the upgrade process is complete a Summary page will be displayed. On this page there are additional actions that will help migrate code that was not included in the initial migration process. These actions will be used later in the workshop, this page can be revisited by opening the Upgrade Assistant via the context menu, for now click Done to continue.
 
     ![](img/upgrade-summary.png)
 
