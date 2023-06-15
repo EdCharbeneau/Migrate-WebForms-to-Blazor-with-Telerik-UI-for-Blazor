@@ -180,7 +180,7 @@ ASP.NET Core applications are standardized to follow the same conventions as the
     * In **ASP.NET Framework** application settings were stored in the **Web.config** file. With ASP.NET Core settings are now stored in **appsettings.json**. Migrate the settings from Web.config to appsettings.json.
 
     appsettings.json
-    ```json
+    ```js
     { ... existing settings ... }
     ,
     "UseMockData": true,
@@ -196,7 +196,7 @@ ASP.NET Core applications are standardized to follow the same conventions as the
 
 9. (optional) Write a quick example to check data connectivity. Replace the code in **Index.razor**. Inject the **ICatalogService** and display data on the page. Try setting the **UseMockData** value to **true** and verify the SQL database is created.
 
-    ```razor
+    ```html
     @page "/"
     @using eShopLegacyWebForms.Models;
     @using eShopLegacyWebForms.Services;
