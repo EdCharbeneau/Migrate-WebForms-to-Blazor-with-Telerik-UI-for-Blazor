@@ -74,7 +74,7 @@ nav_order: 2
     {: .note-title }
     > Using the Global.asax.cs may be not be productive for all scenarios. For example, in larger applications individual files or features might be better to target for simplicity. 
 
-    * Select the **Upgrade Class** link from the **Summary** screen, or the **Upgrade** menu.
+    * Select the **Upgrade Class** action from the **Summary** screen, or the **Upgrade** menu.
 
     ![](img/upgrade-class.png)
 
@@ -82,7 +82,7 @@ nav_order: 2
 
     ![](img/upgrade-class-2.png)
 
-    * The tool will list all dependencies of the selected class. For this example scenario, it will be all the entire application's contents. Because there is no upgrade path for **System.Web**, deselect these items from the list. The classes may be easier organize in **Flat view**, which is enabled on the upper right corner of the interface.
+    * The tool will list all dependencies of the selected class. For this example scenario, it will be all the entire application's contents. Because there is no upgrade path for **System.Web**, deselect the **System.Web** items from the list. The classes may be easier organize in **Flat view**, which is enabled on the upper right corner of the interface.
 
     ![](img/upgrade-class-3.png)
 
