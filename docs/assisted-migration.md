@@ -94,9 +94,11 @@ In this section we'll use the **.NET Upgrade Assistant** to prepare the project 
 
     ![](img/upgrade-complete.png)
 
-## Summary so far
+## Conclusion
 
-<!-- write a summary of what we accomplished -->
+In this section we used the .NET Upgrade Assistant to start the migration process. A side-by-side migration is being used to move the existing application to a completely new code base. The assistant moved all code which is compatible with the new version of ASP.NET including, EntityFramework and database code, data services, classes. 
+
+The new application will not start successfully in its current state and requires additional work before it is stable. In the next section we'll continue the migration process with manual coding. 
 
 * EF
 * Services
