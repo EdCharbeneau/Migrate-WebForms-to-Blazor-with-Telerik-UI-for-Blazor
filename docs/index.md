@@ -5,7 +5,17 @@ nav_order: 0
 
 # Introduction
 
-...
+Blazor is the next generation front-end web application framework for .NET developers. The framework offers a productive and powerful way to construct large-scale applications with a modern component-based architecture. Migrating legacy .NET Framework and Web Forms to Blazor is a monumental task. Migration requires knowledge of breaking changes between platforms and careful planning. 
+
+What You’ll Do During the Workshop:
+
+* Understand the scope of migrating your .NET applications
+* Explore the Microsoft Upgrade Assistant for Visual Studio
+* Determine what can code be migrated to .NET 7
+* Start a new Blazor Server project
+* Migrate an existing Web Forms codebase to Blazor
+* Tap into Telerik UI for Blazor to generate Blazor views
+* Create a DataGrid with full editing 
 
 {: .note-title }
 Note callouts contain contextual information for the current step. These notes are proved by the author to help communicate steps or concepts directly related to the workshop.
@@ -15,12 +25,25 @@ Tip callouts contain related information that may be useful outside the workshop
 
 ## Prerequisites 
 
+For this workshop, a basic understanding of Microsoft ASP.NET technologies is recommended. Throughout the workshop ASP.NET on .NET Framework and .NET Core will be utilized.
+
+Technologies used:
+
+* Visual Studio
+* ASP.NET
+* Blazor
+* C#
+* Razor
+
 <!-- ??? 
 ```
 		<UseRazorSourceGenerator>true</UseRazorSourceGenerator>
 		<Nullable>enable</Nullable>
 ```		
 -->
+
+{: .note-title }
+Individuals may need administrative rights on their system to complete some tasks in the workshop. 
 
 To complete the workshop be sure to install all of the following prerequisite items. All of the items below have **free, or free trial** options. If you have **existing paid licenses** of the Visual Studio 2022 or Telerik UI for Blazor **please use those** and do not reinstall the free versions.
 
@@ -68,3 +91,7 @@ To complete the workshop be sure to install all of the following prerequisite it
 	![](img/create-branch.png)
 	
 ## Conclusion
+
+In this section the prerequisites for the workshop were installed, and the application was cloned to the local machine. These steps prepared us for the remainder of the workshop.
+
+In the next section we will create a new project which will eventually become the migrated application.

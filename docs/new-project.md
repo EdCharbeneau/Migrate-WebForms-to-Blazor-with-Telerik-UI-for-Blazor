@@ -5,7 +5,9 @@ nav_order: 1
 
 # Creating a new project
 
-Because of the number of differences between .NET Framework and ASP.NET Core, the app will be migrated to a brand new project. In addition, there is no direct migration path for Web Forms views to ASP.NET Core and the views will need to be completely rewritten. The Telerik UI for Blazor templates, scaffolding tools, and components will reduce the amount of coding needed to write new views.
+In the previous section we cloned an existing ASP.NET Web Forms application, **eShopLegacyWebForms**. In this section we will begin the migration process by creating a new project. The new project will be the migration target as we perform a side-by-side migration strategy. Because of the number of differences between .NET Framework and ASP.NET Core, the app will be migrated to a brand new project. In addition, there is no direct migration path for Web Forms views to ASP.NET Core and the views will need to be completely rewritten. 
+
+To create the new project we'll utilize Telerik UI for Blazor. The Telerik UI for Blazor contains productivity tools for Blazor applications and is a great fit for migration as well. The Telerik templates, scaffolding tools, and components will reduce the amount of coding needed to write new views.
 
 {: .note-title }
 > The Telerik Extensions for Visual Studio are added to Visual Studio when installing Telerik UI for Blazor. If the extension isn't installed, it can be added from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=TelerikInc.ProgressTelerikBlazorVSExtensions), or the Telerik UI for Blazor installer. Important: Telerik UI for Blazor is required to make use of the extension.
@@ -62,4 +64,9 @@ Because of the number of differences between .NET Framework and ASP.NET Core, th
 
 ## Conclusion
 
-...
+In this section we added a new Telerik Blazor Server project to the solution. This project will eventually become the migrated solution. Through the Telerik tooling, a new project was easily created using a template which includes navigation, and sampling of components that are included in Telerik UI for Blazor.
+
+{: .tip-title }
+Just a few components are shown in the template, however Telerik UI for Blazor includes over 100 components. For a complete list of components see the official [Telerik UI for Blazor home page](https://www.telerik.com/blazor-ui).
+
+In the next section we will use the .NET Upgrade Assistant to begin the migration process.

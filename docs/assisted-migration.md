@@ -5,7 +5,7 @@ nav_order: 2
 
 # Assisted Migration
 
-...
+In this section we'll use the **.NET Upgrade Assistant** to prepare the project and start the migration process. The .NET Upgrade Assistant is a **Visual Studio extension** and command-line tool that's designed to assist with upgrading apps to the latest version of .NET. The .NET Upgrade Assistant is not fully automated, however it does shorten the amount of manual coding necessary to complete a migration.
 
 1. Use the **.NET Upgrade Assistant** to **Upgrade** the **eShopLegacyWebForms** project. 
 

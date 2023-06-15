@@ -48,7 +48,7 @@ There are four main views in the **eShopLegacyWebForms** application. The **Defa
 
     * Bring dependencies into scope by adding the following using statements to `_Imports.razor`.
 
-    ```
+    ```html
     @using Telerik.FontIcons
     @using eShopLegacyWebForms.Models
     @using eShopLegacyWebForms.Services
@@ -86,7 +86,7 @@ There are four main views in the **eShopLegacyWebForms** application. The **Defa
 
     * For the **CatalogServiceMock** use the **AsQueryable** method to cast the mocked items as Queryable before applying the **ToDataSourceResultAsync** extension method.
 
-    ```
+    ```csharp
     public Task<DataSourceResult> GetCatalogItemsPaginated(DataSourceRequest request)
     {
         var items = ComposeCatalogItems(catalogItems);
@@ -97,7 +97,7 @@ There are four main views in the **eShopLegacyWebForms** application. The **Defa
 
     * Update the **ICatalogService** interface with the new method signature.
 
-    ```
+    ```csharp
     Task<DataSourceResult> GetCatalogItemsPaginated(DataSourceRequest request);
     ```
 
