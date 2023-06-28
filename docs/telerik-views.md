@@ -3,7 +3,7 @@ title: 4. Telerik Views
 nav_order: 4
 ---
 
-# Migrating views with Teleirk UI for Blazor
+# Migrating views with Telerik UI for Blazor
 
 With the application's core logic migrated, the views for the application will need to be rewritten for Blazor. In this section we'll use Telerik UI for Blazor to complete the application's views. Telerik UI for Blazor includes 100+ UI components, productivity tools, and customization features that shorten development cycles.
 
@@ -34,7 +34,7 @@ There are four main views in the **eShopLegacyWebForms** application. The **Defa
         * Service update method name: **UpdateCatalogItem**
         * Service delete method name: **RemoveCatalogItem**
         * (check) Pageable
-        * (check) Resizeable
+        * (check) Resizable
         * (check) Reorderable
         * (check) Sortable
         * Filter mode: **Filter Menu**
@@ -54,17 +54,17 @@ There are four main views in the **eShopLegacyWebForms** application. The **Defa
     @using eShopLegacyWebForms.Services
     ```
 
-    * The scaffolding tool defaults to **async** methods. Replace `async Task` with `void` for LoadData, Create, Update, and Delete methods. Remove the `await` keyword from all LoadData statements.
+    * The scaffolding tool defaults to **async** methods. Replace `async Task` with `void` for the LoadData, Create, Update, and Delete methods. Remove the `await` keyword from all LoadData statements.
 
     > Modern .NET applications make heavy use of async/await. By default the scaffolding tool creates async methods. To further modernize the codebase async/await is recomended for services, however migrating services is beyond the scope of the workshop.
 
-    * Update the service call in LoadData. Use the **GetCatalogItemsPaginated** method to get the first 10 items from the first page of data in the database. The method returns a view model with a Data property which contains the resulting CategoryItems. Apply the results to the page's Data property.
+    * Update the service call in LoadData. Use the **GetCatalogItemsPaginated** method to get the first 10 items from the first page of data in the database. The method returns a view model with a Data property that contains the resulting CategoryItems. Apply the results to the page's Data property.
 
     ```
     Data =  DataService.GetCatalogItemsPaginated(10,0).Data.ToList();
     ```
 
-    * The Telerik Data Grid's auto-generated columns feature allows the grid to generate columns based on meta data. The CategoryItem's properties and annotations effect what columns show and how they're formatted. Run the application to see the auto-generated grid.
+    * The Telerik Data Grid's auto-generated columns feature allows the grid to generate columns based on meta data. The CategoryItem's properties and annotations affect what columns show and how they're formatted. Run the application to see the auto-generated grid.
 
     > Depending on the scenario, generated columns can be enough to complete the task. Alternatively, columns can be defined in markup for complete customization with templates. This workshop demonstrates both approaches.
 
@@ -101,7 +101,7 @@ There are four main views in the **eShopLegacyWebForms** application. The **Defa
     Task<DataSourceResult> GetCatalogItemsPaginated(DataSourceRequest request);
     ```
 
-    * In **NewIndex.razor**, make use of Telerik Grid's **OnRead** event. The OnRead event's GridReadEventArgs argument contains the **DataSourceRequest** which is needed by **GetCatalogItemsPaginated**. Update the LoadData event to an **async Task**, then add a parameter for the **GridReadEventArgs**.
+    * In **NewIndex.razor**, make use of Telerik Grid's **OnRead** event. The OnRead event's GridReadEventArgs argument contains the **DataSourceRequest** needed by **GetCatalogItemsPaginated**. Update the LoadData event to an **async Task**, then add a parameter for the **GridReadEventArgs**.
 
     ```csharp
     async Task LoadData(GridReadEventArgs args)
@@ -125,9 +125,9 @@ There are four main views in the **eShopLegacyWebForms** application. The **Defa
     LoadData();
     ```
 
-    * Run the application, try sorting, filtering and paging the data. Note that all actions are directly translated to SQL queries that only fetch the necessary data from the database, thus reducing server overhead.
+    * Run the application, try sorting, filtering and paging the data. Note that all actions are directly translated to SQL queries that only fetch the necessary data from the database, reducing server overhead.
 
-3. The Telerik Grid can easily be customized with a wide variety of templates. Add a GridColumn template to show an image from the CatalogItem. The Template can contain any HTML element, Razor code, and components.
+3. The Telerik Grid can easily be customized with a wide variety of templates. Add a GridColumn template to show an image from the CatalogItem. The Template can contain any HTML element, Razor code, and other components.
 
     * Add a GridColumn to the GridColumns element.
 
