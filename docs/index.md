@@ -5,23 +5,23 @@ nav_order: 0
 
 # Introduction
 
-Blazor is the next generation front-end web application framework for .NET developers. The framework offers a productive and powerful way to construct large-scale applications with a modern component-based architecture. Migrating legacy .NET Framework and Web Forms to Blazor is a monumental task. Migration requires knowledge of breaking changes between platforms and careful planning. 
+Blazor is the next-generation front-end web application framework for .NET developers. The framework offers a productive and powerful way to construct large-scale applications with a modern component-based architecture. Migrating legacy .NET Framework and Web Forms to Blazor is a monumental task. Migration requires knowledge of breaking changes between platforms and careful planning. 
 
 What You’ll Do During the Workshop:
 
 * Understand the scope of migrating your .NET applications
 * Explore the Microsoft Upgrade Assistant for Visual Studio
-* Determine what can code be migrated to .NET 7
+* Determine what code can be migrated to .NET 7
 * Start a new Blazor Server project
 * Migrate an existing Web Forms codebase to Blazor
-* Tap into Telerik UI for Blazor to generate Blazor views
+* Tap into Progress Telerik UI for Blazor to generate Blazor views
 * Create a DataGrid with full editing 
 
 {: .note-title }
-Note callouts contain contextual information for the current step. These notes are proved by the author to help communicate steps or concepts directly related to the workshop.
+Note callouts, contain contextual information for the current step. These notes are proved by the author to help communicate steps or concepts directly related to the workshop.
 
 {: .tip-title }
-Tip callouts contain related information that may be useful outside the workshop. 
+Tip callouts, contain related information that may be useful outside the workshop. 
 
 ## Prerequisites 
 
@@ -45,7 +45,7 @@ Technologies used:
 {: .note-title }
 Individuals may need administrative rights on their system to complete some tasks in the workshop. 
 
-To complete the workshop be sure to install all of the following prerequisite items. All of the items below have **free, or free trial** options. If you have **existing paid licenses** of the Visual Studio 2022 or Telerik UI for Blazor **please use those** and do not reinstall the free versions.
+To complete the workshop be sure to install the following prerequisite items. All the items below have **free, or free trial** options. If you have **existing paid licenses** of Visual Studio 2022 or Telerik UI for Blazor **please use those** and do not reinstall the free versions.
 
 * [Visual Studio 2022 [Any Edition]](https://visualstudio.microsoft.com/downloads/)
 * [.NET 7.0.5 or later](https://dotnet.microsoft.com/en-us/download/dotnet/7.0)
@@ -55,7 +55,7 @@ To complete the workshop be sure to install all of the following prerequisite it
 
 ## Getting started
 
-1. Clone the [eShop Repository](https://github.com/dotnet-architecture/eShopModernizing) which contains the sample Web Forms application. 
+1. Clone the [eShop Repository](https://github.com/dotnet-architecture/eShopModernizing) that contains the sample Web Forms application. 
 
 	Throughout this workshop we will be migrating the eShop sample application provided by **Microsoft via GitHub**. If you have not already created a clone of the repository, create one now. This repository contains multiple eShop solutions. For this workshop we will be using the **eShopLegacyWebForms** solution.
 
@@ -68,10 +68,10 @@ To complete the workshop be sure to install all of the following prerequisite it
 	{: .note-title }
 	After installing frameworks and workloads a reboot of Visual Studio may be necessary.
 
-3. Start the eShopLegacyWebForms application. From Visual Studio, click **Start** or press **F5**. The sample application is a simple store management page with view, create, edit, and delete functions. Explore the application, make reference of the different actions and page views.
+3. Start the eShopLegacyWebForms application. From Visual Studio, click **Start** or press **F5**. The sample application is a simple store management page with view, create, edit, and delete functions. Explore the application, and make reference of the different actions and page views.
 
     {: .note-title }
-	> If the application does not run on the first try, Start the application a second time. The first time building the project occasionally hits a race condition where resources are not yet ready for the application to run. Running the app a second time typically works.
+	> If the application does not run on the first try, start the application a second time. The first time building the project occasionally hits a race condition where resources are not yet ready for the application to run. Running the app a second time typically works.
 
 	![](img/2-eshop-start.png)
 
