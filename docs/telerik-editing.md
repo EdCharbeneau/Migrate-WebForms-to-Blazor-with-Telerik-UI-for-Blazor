@@ -71,7 +71,7 @@ In this section we'll make full use of the Telerik Grid's editing capabilities a
 
     * Start the application and try to **edit a record**. The record should submit and update successfully. 
 
-3. Start the application and try to **add** a record. This will cause an exception to occur. When using complex models sometimes the grid will need help initializing an empty record. In this instance, the new record is causing an execption because the CatalogBrand and CatalogType are intitializing as null. The Telerik Grid features an OnAdd which fires when the Add command button for a newly added item is clicked.
+3. Start the application and try to **add** a record. This will cause an exception to occur. When using complex models sometimes the grid will need help initializing an empty record. In this instance, the new record is causing an execption because the CatalogBrand and CatalogType are initializing as null. The Telerik Grid features an OnAdd that fires when the Add command button for a newly added item is clicked.
 
     * Use the "OnAdd" event to initialize a new CatalogItem when the Add button is clicked.
 
@@ -100,7 +100,7 @@ In this section we'll make full use of the Telerik Grid's editing capabilities a
 
     * Start the application and try to **add a record**. The record should submit and update successfully. The new record will appear on the last page of the grid.
 
-3. The Telerik Grid includes a built-in dialog to prevent accendental deletion of records. To enable the dialog simply set the ConfirmDelete property on the grid to `true`.
+3. The Telerik Grid includes a built-in dialog to prevent accidental deletion of records. To enable the dialog simply set the ConfirmDelete property on the grid to `true`.
 
     * Start the application and try to **delete a record**. The action should cause a prompt confirming the action.
 
@@ -110,4 +110,4 @@ In this section we'll make full use of the Telerik Grid's editing capabilities a
 
 ## Conclusion
 
-In this section we replaced the create, edit and delete views in the application by leveraging the existing Telerik Grid view. With all of the views for the application migrated, the new application is ready for production.
+In this section we replaced the create, edit and delete views in the application by leveraging the existing Telerik Grid view. With all the views for the application migrated, the new application is ready for production.
