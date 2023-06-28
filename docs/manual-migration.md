@@ -5,22 +5,22 @@ nav_order: 3
 
 # Manual migration
 
-The **.NET Upgrade Assistant** has upgraded the project as much has possible using automation and it is now time to manually work on the project. In its current state, the project is not able to run. Before the application will start, some of the code needs to be manually rewritten. The following are highlights of what needs to be completed before the migration is complete.
+The **.NET Upgrade Assistant** has upgraded the project as much as possible using automation and it is now time to manually work on the project. In its current state, the project is not able to run. Before the application will start, some of the code needs to be manually rewritten. The following are highlights of what needs to be done before the migration is complete.
 
 * There is no **Global.asax.cs** in ASP.NET Core. This file must be manually migrated to **Program.cs**
 * Configuration has breaking changes between ASP.NET Framework and ASP.NET Core.
-* Dependency injection (DI) is included in ASP.NET Core. 3rd party DI can be used, however manual changes are required to do so.
+* Dependency injection (DI) is included in ASP.NET Core. Third-party DI can be used, however manual changes are required to do so.
 * Web Forms views **.aspx** must be completely reconstructed as Razor Components **.razor**.
 
 ## Migrating Global.asax.cs
 
 ASP.NET Core applications are standardized to follow the same conventions as the rest of the .NET ecosystem. The startup routine of an ASP.NET Core application uses a Program.cs file same as .NET Console, .NET MAUI, and many other application models. The **Program.cs** file is the next best equivalent to the **Global.asax.cs** file.
 
-1. Examine the **Global.asax.cs** in **eShopLegacyWebForms**. Lines 29 & 30, were part of System.Web and not compatible with ASP.NET Core. RouteConfig is now handled by Razor Components through route directives. In addition, BundleConfig is no longer used and viable replacements such as WebPack can be used as needed. In this example, the Telerik UI for Blazor will introduce enough functionality out-of-the-box to replace many of the resources (.js and .css) typically bundled by WebPack. 
+1. Examine the **Global.asax.cs** in **eShopLegacyWebForms**. Lines 29 & 30, were part of System.Web and not compatible with ASP.NET Core. RouteConfig is now handled by Razor Components through route directives. In addition, BundleConfig is no longer used and viable replacements such as WebPack can be used as needed. In this example, Telerik UI for Blazor will introduce enough out-of-the-box functionality to replace many of the resources (.js and .css) typically bundled by WebPack. 
 
     Next is **ConfigureContainer**. In Web Forms this method would configure the Dependency Injection (DI) container using AutoFac. In ASP.NET Core, DI is included as **Microsoft.Extensions.DependencyInjection** through the **IServiceCollection** interface. Because the legacy application used AutoFac it will be easier to migrate the existing configuration to a updated version of AutoFac that supports ASP.NET Core's **IServiceCollection**.
 
-    Last is **ConfigDataBase**. In Web Forms this method setup the EntityFramework configuration and database initialization methods. Included is a mock data setting used to run the application with an in memory database instead of SQL server.
+    Last is **ConfigDataBase**. In Web Forms this method setup the EntityFramework configuration and database initialization methods. Included is a mock data setting used to run the application with an in memory database instead of an SQL server.
 
     ```csharp
     protected void Application_Start(object sender, EventArgs e)
@@ -50,7 +50,7 @@ ASP.NET Core applications are standardized to follow the same conventions as the
 
     ```
 
-    * ASP.NET Framework's **System.Configuration.ConfigurationManager** is not compatible with ASP.NET Core's **Microsoft.Extensions.Configuration.ConfigurationManager** and will need to be updated. In **Program.cs** under `CreateBuilder`, write a statement that fetches the value of `UseMockData` from configuration.
+    * ASP.NET Framework's **System.Configuration.ConfigurationManager** is not compatible with ASP.NET Core's **Microsoft.Extensions.Configuration.ConfigurationManager** and will need to be updated. In **Program.cs** under `CreateBuilder`, write a statement that fetches the value of `UseMockData` from the configuration.
 
     ```csharp
     var builder = WebApplication.CreateBuilder(args);
