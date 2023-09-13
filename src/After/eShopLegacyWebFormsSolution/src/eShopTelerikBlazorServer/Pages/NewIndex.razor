@@ -1,0 +1,114 @@
+@page "/"
+@using Telerik.DataSource;
+@inject ICatalogService DataService;
+
+<TelerikGrid Data="@Data"
+             OnRead="@LoadData"
+             Pageable="true"
+             PageSize="10"
+             Sortable="true"
+             SortMode="@SortMode.Single"
+             FilterMode="@GridFilterMode.FilterMenu"
+             Resizable="true"
+             Reorderable="true"
+             AutoGenerateColumns="false"
+             EditMode="@GridEditMode.Popup"
+             OnUpdate="@Update"
+             OnAdd="@OnAdd"
+             OnCreate="@Add"
+             OnDelete="@Delete"
+             ConfirmDelete="true">
+    <GridToolBarTemplate>
+        <GridCommandButton Command="Add" Icon="FontIcon.Plus">Add</GridCommandButton>
+    </GridToolBarTemplate>
+    <GridColumns>
+        <GridColumn Field="@nameof(CatalogItem.PictureFileName)" Title="Picture" Width="130px" Filterable="false" Editable="false">
+            <Template>
+                @{
+                    var item = (CatalogItem)context;
+                    <img src="@($"/Pics/{item.PictureFileName}")" style="max-width:100px;" alt="Image of @item.Name" />
+                }
+            </Template>
+        </GridColumn>
+        <GridColumn Field="@nameof(CatalogItem.Name)" />
+        <GridColumn Field="@nameof(CatalogItem.Description)" />
+        <GridColumn Field="CatalogBrand.Brand" Title="Brand" FilterMenuType="@FilterMenuType.CheckBoxList">
+            <EditorTemplate>
+                @{
+                    var item = (CatalogItem)context;
+                    <TelerikDropDownList Data="@brands" TextField="Brand" ValueField="Id" @bind-Value="item.CatalogBrandId" />
+                }
+            </EditorTemplate>
+            </GridColumn>
+        <GridColumn Field="CatalogType.Type" Title="Type" FilterMenuType="@FilterMenuType.CheckBoxList">
+            <EditorTemplate>
+                @{
+                    var item = (CatalogItem)context;
+                    <TelerikDropDownList Data="@types" TextField="Type" ValueField="Id" @bind-Value="item.CatalogTypeId" />
+                }
+            </EditorTemplate>
+        </GridColumn>        <GridColumn Field="@nameof(CatalogItem.Price)" DisplayFormat="{0:C}" />
+        <GridColumn Field="@nameof(CatalogItem.PictureFileName)" Title="Picture Name" />
+        <GridColumn Field="@nameof(CatalogItem.AvailableStock)" Title="Stock" />
+        <GridColumn Field="@nameof(CatalogItem.RestockThreshold)" Title="Restock" />
+        <GridColumn Field="@nameof(CatalogItem.MaxStockThreshold)" Title="Max Stock" />
+        <GridCommandColumn Width="300px">
+            <GridCommandButton Command="Edit" Icon="FontIcon.Pencil">Edit</GridCommandButton>
+            <GridCommandButton Command="Save" Icon="FontIcon.Save" ShowInEdit="true">Save</GridCommandButton>
+            <GridCommandButton Command="Cancel" Icon="FontIcon.Cancel" ShowInEdit="true">Cancel</GridCommandButton>
+            <GridCommandButton Command="Delete" Icon="FontIcon.Trash">Delete</GridCommandButton>
+        </GridCommandColumn>
+    </GridColumns>
+</TelerikGrid>
+
+@code {
+    private IEnumerable<CatalogType> types = Array.Empty<CatalogType>();
+    private IEnumerable<CatalogBrand> brands = Array.Empty<CatalogBrand>();
+    public List<CatalogItem> Data { get; set; }
+
+    async Task OnAdd(GridCommandEventArgs args)
+    {
+        var newItem = (CatalogItem)args.Item;
+        //Set default values for new items
+        newItem.Name = "Untitled";
+        newItem.Description = "Description...";
+        newItem.CatalogBrand = brands.First();
+        newItem.CatalogType = types.First();
+        newItem.CatalogTypeId = types.First().Id;
+        newItem.CatalogBrandId = brands.First().Id;
+        newItem.PictureUri = "";
+        //Cancel if needed
+        //args.IsCancelled = true;
+    }
+
+    protected override Task OnInitializedAsync()
+    {
+        types = DataService.GetCatalogTypes();
+        brands = DataService.GetCatalogBrands();
+        return base.OnInitializedAsync();
+    }
+
+
+    async Task LoadData(GridReadEventArgs args)
+    {
+        DataSourceResult results = await DataService.GetCatalogItemsPaginated(args.Request);
+        args.Data = results.Data; // apply Data
+        args.Total = results.Total; // update Totals
+    }
+
+    void Update(GridCommandEventArgs args)
+    {
+        DataService.UpdateCatalogItem((CatalogItem)args.Item);
+    }
+
+    void Add(GridCommandEventArgs args)
+    {
+        DataService.CreateCatalogItem((CatalogItem)args.Item);
+    }
+
+    void Delete(GridCommandEventArgs args)
+    {
+        DataService.RemoveCatalogItem((CatalogItem)args.Item);
+    }
+}
+
