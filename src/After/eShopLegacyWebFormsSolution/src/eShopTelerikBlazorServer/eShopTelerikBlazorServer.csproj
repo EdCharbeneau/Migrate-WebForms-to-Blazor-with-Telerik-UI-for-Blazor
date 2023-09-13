@@ -26,10 +26,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<!--
-	    For free trial use: 
-        <PackageReference Include="Telerik.UI.for.Blazor.Trial" Version="4.5.0" />
-	  -->
+		<!-- For free trial use: -->
+        <!-- <PackageReference Include="Telerik.UI.for.Blazor.Trial" Version="4.5.0" /> -->
+		<!-- For commercial product use: -->
 		<PackageReference Include="Telerik.UI.for.Blazor" Version="4.5.0" />
 		<PackageReference Include="Autofac.Extensions.DependencyInjection" Version="8.0.0" />
 		<PackageReference Include="log4net" Version="2.0.15" />
