@@ -1,5 +1,5 @@
 ---
-title: 6. Introduction
+title: 6. Conclusion
 nav_order: 6
 ---
 
@@ -16,8 +16,11 @@ What You Learned During the Workshop:
 ## Next Steps
 
 * Learn more about Blazor
-    * List resources here
+    * [https://dotnet.microsoft.com/en-us/apps/aspnet/web-apps/blazor](https://dotnet.microsoft.com/en-us/apps/aspnet/web-apps/blazor)
+    * [Ebook: Learning Blazor (FREE)](https://www.telerik.com/campaigns/blazor/ebook-learning-blazor)
 * Learn more about Telerik UI for Blazor
-    * List resources here
+    * [Telerik.com](https://www.telerik.com/)
+    * [Telerik UI for Blazor](https://www.telerik.com/blazor-ui)
+    * [Telerik REPL for Blazor: Play, Learn, and Share with Blazor Snippets](https://blazorrepl.telerik.com/)
 * Learn more about Progress
-    * List resources here
+    * [Products designed to accelerate your path to success.](https://www.progress.com/)
