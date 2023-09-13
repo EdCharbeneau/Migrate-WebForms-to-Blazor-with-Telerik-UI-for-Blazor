@@ -13,6 +13,8 @@ What You Learned During the Workshop:
 * Started a new Blazor Server project using the Telerik UI for Blazor template.
 * Created a fully featured Blazor grid view using the Telerik Grid.
 
+The complete solution can be found in this repo under: src/After. Please see the readme.md located in the src/After folder for information regarding the Trial and Commercial license of Telerik UI for Blazor.
+
 ## Next Steps
 
 * Learn more about Blazor
